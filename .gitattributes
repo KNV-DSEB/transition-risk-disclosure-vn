@@ -1,0 +1,14 @@
+# Keep text files LF in the repository and in working copies on every OS.
+* text=auto eol=lf
+
+# Binary research artifacts: never diff/merge as text.
+*.xlsx binary
+*.xls binary
+*.docx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary
+
+# Raw source layer is immutable: store byte-exact, never normalize line endings.
+data/raw/** -text

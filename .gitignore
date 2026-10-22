@@ -1,0 +1,46 @@
+# --- Secrets: never commit ---------------------------------------------------
+.env
+.env.*
+*.env
+secrets/
+credentials*.json
+*api_key*
+*apikey*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# --- Restricted / licensed data (keep out of git; record in SOURCE_MANIFEST.csv) ---
+data/restricted/
+data/licensed/
+
+# --- Large or regenerable outputs -------------------------------------------
+outputs/**/cache/
+*.parquet.tmp
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- OS / editor -------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+.vscode/
+.idea/
+
+# --- Local AI tool settings (machine-specific) -------------------------------
+.claude/settings.local.json
+
+# --- Downloaded reports (copyright; re-downloadable; sha256 recorded in SOURCE_MANIFEST.csv) ---
+data/raw/**/*.pdf
+
+# --- Third-party full texts for verification only (copyright): keep local, record sha256 in Evidence_Matrix ---
+literature/fulltext/
